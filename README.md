@@ -19,3 +19,4 @@ Improvements to be made:
 - Integrating google maps into searches
 - Adding animations to background images
 - Adding separate background images for day and night
+- Adding more background images for different weather conditions
