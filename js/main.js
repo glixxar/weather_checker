@@ -6,6 +6,7 @@ $( document ).ready(function() {
     let apiOptions = "units=metric&";
     let apiKey = "appid=82f64da34251b0e58e057d344f3307a1";
     let json = queryUrl + city + apiOptions + apiKey;
+    const spinner = document.getElementById("spinner");
 
     fetch(json)
       .then((response) => response.json())
@@ -21,9 +22,11 @@ function changeCity(){
     let apiOptions = "units=metric&";
     let apiKey = "appid=82f64da34251b0e58e057d344f3307a1";
     let json = queryUrl + city + apiOptions + apiKey;
+    spinner.removeAttribute('hidden');
     fetch(json)
     .then((response) => response.json())
     .then((data) => {
+        spinner.setAttribute('hidden', '');
         setWeather(data);
     });
 }
